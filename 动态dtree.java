@@ -1,4 +1,4 @@
-//ºóÌ¨
+//åå°
  Sys_menu root =  this.userinfoServiceImpl.getRootMenu("0000");
         List<MyTree> list = new ArrayList<MyTree>();
         MyTree d_root = new MyTree();
@@ -8,8 +8,8 @@
         d_root.setUrl(root.getUrl());
         d_root.setTitle("");
         d_root.setTarget(root.getTarget());
-		list.add(d_root);//Ìí¼Ó¸ù½Úµã
-		//»ñÈ¡¶ş¼¶½Úµã
+		list.add(d_root);//æ·»åŠ æ ¹èŠ‚ç‚¹
+		//è·å–äºŒçº§èŠ‚ç‚¹
 		List<Sys_menu> menu_2 = this.userinfoServiceImpl.getMenu(root.getMenu_id());
 		System.out.println(menu_2.size());
 		if(menu_2.size()!=0){
@@ -23,7 +23,7 @@
 			 branch_2.setTitle("");
 			 branch_2.setTarget(menu_2.get(i).getTarget());
 			list.add(branch_2);
-			//»ñÈ¡Èı¼¶½Úµã
+			//è·å–ä¸‰çº§èŠ‚ç‚¹
 			List<Sys_menu> menu_3 = this.userinfoServiceImpl.getMenu(menu_2.get(i).getMenu_id());
 			System.out.println(menu_3.size());
 			if(menu_3.size()!=0){
@@ -37,7 +37,7 @@
 				branch_3.setTitle("");
 				branch_3.setTarget(menu_3.get(j).getTarget());
 				list.add(branch_3);
-				//»ñÈ¡ËÄ¼¶½Úµã(Ä¿Ç°×î¶à4¼¶)
+				//è·å–å››çº§èŠ‚ç‚¹(ç›®å‰æœ€å¤š4çº§)
 				List<Sys_menu> menu_4 = this.userinfoServiceImpl.getMenu(menu_3.get(j).getMenu_id());
 				System.out.println(menu_4.size());
 				if(menu_4.size()!=0){
@@ -60,7 +60,7 @@
 		request.setAttribute("tree_list", list);
 
 
-//Ç°Ì¨
+//å‰å°
 <div class="dtree" id="dtree">
  					<script type="text/javascript">
  				        	d = new dTree('d');
